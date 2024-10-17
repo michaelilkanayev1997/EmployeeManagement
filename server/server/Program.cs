@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using server.Data;
+using server.Repositories;
 
 namespace server
 {
@@ -21,6 +22,11 @@ namespace server
                     .AllowAnyHeader();
                 });
             });
+
+            // add the employee repository to the DI (dependency injection)
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            builder.Services.AddControllers();
 
             var app = builder.Build();
 
