@@ -1,0 +1,15 @@
+# Ignore files for both Angular and .NET projects
+
+# Visual Studio
+*.user
+*.suo
+*.sln
+*.vscode/
+bin/
+obj/
+.vs/
+
+# Node/Angular
+node_modules/
+dist/
+.angular/
