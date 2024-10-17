@@ -40,7 +40,28 @@ namespace server.Controllers
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
             await _employeeRepository.AddEmployeeAsync(employee);
-            return Created();
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id });
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteEmployeeById(int id)
+        {
+            await _employeeRepository.DeleteEmployeeAsync(id);
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Employee>> UpdateEmployeeAsync(int id, Employee employee)
+        {
+            if (id != employee.Id)
+            {
+                return BadRequest();
+            }
+
+            await _employeeRepository.UpdateEmployeeAsync(employee);
+
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id });
+        }
+
     }
 }
