@@ -12,7 +12,19 @@ namespace server
             builder.Services.AddDbContext<AppDbContext>(
                 options => options.UseInMemoryDatabase("EmployeeDb"));
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("MyCors", builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                });
+            });
+
             var app = builder.Build();
+
+            app.UseCors("MyCors");
 
             app.MapGet("/", () => "Hello World!");
 
