@@ -26,6 +26,20 @@
           <td>{{ employee.phone }}</td>
           <td>{{ employee.email }}</td>
           <td>{{ employee.position }}</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm m-2"
+              (click)="editEmployee(employee.id)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteEmployee(employee.id)"
+            >
+              Delete
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
