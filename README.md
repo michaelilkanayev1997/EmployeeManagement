@@ -2,7 +2,7 @@
 
 # Full Stack Project: Angular & ASP.NET
 
-This project was mainly created to **learn ASP.NET**. It follows the **"Learn C# Full Stack Web Development with Angular and ASP.NET"** course by Jannick Leismann and Denis Panjuta.
+This project was mainly created to **learn ASP.NET**. It follows the **"Learn C# Full Stack Web Development with Angular and ASP.NET"**  Udemy course by Jannick Leismann and Denis Panjuta.
 
 ## Overview
 
