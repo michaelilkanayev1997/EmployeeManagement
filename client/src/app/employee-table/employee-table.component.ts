@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './employee-table.component.html',
-  styleUrl: './employee-table.component.css',
 })
 export class EmployeeTableComponent {
   employees: Employee[] = [];

@@ -40,7 +40,7 @@ namespace server.Controllers
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
             await _employeeRepository.AddEmployeeAsync(employee);
-            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id });
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
         }
 
         [HttpDelete("{id}")]
@@ -60,7 +60,7 @@ namespace server.Controllers
 
             await _employeeRepository.UpdateEmployeeAsync(employee);
 
-            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id });
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
         }
 
     }

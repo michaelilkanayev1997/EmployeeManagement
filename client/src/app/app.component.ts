@@ -7,7 +7,6 @@ import { EmployeeTableComponent } from './employee-table/employee-table.componen
   standalone: true,
   imports: [RouterOutlet, EmployeeTableComponent, RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'client';

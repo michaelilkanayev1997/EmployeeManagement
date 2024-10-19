@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './employee-form.component.html',
-  styleUrl: './employee-form.component.css',
 })
 export class EmployeeFormComponent implements OnInit {
   employee: Employee = {
