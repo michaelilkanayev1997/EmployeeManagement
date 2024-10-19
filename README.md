@@ -24,9 +24,8 @@ This project was mainly created to **learn ASP.NET**. It follows the **"Learn C#
 1. **Clone the Repository**
 
    git clone https://github.com/michaelilkanayev1997/EmployeeManagement.git
-   cd EmployeeManagement
 
-2. **Backend Setup** (Visual Studio)
+3. **Backend Setup** (Visual Studio)
    
    - Open the `.sln` file in Visual Studio.
    - Restore NuGet packages using:
@@ -35,7 +34,7 @@ This project was mainly created to **learn ASP.NET**. It follows the **"Learn C#
      
    - Run the backend using:
 
-3. **Frontend Setup** (Visual Studio Code)
+4. **Frontend Setup** (Visual Studio Code)
 
    - Navigate to the Angular project folder:
      
